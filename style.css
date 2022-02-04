@@ -1,0 +1,589 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Source Serif 4', sans-serif; */
+
+:root {
+  --main: #cba422;
+  --background: #1e1e1e;
+  --white: #f4f4f4;
+  --html: rgba(255, 255, 255, 0.214);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--white);
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 80px;
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 60px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 40px;
+  font-weight: lighter;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+h5 {
+  font-size: 50px;
+  font-weight: lighter;
+  color: var(--html);
+  margin-bottom: 30px;
+}
+p {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.btn {
+  border: 1px solid var(--white);
+  padding: 15px 25px;
+  color: var(--white);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.circle-mouse{
+  width: 50px;
+  height:50px;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 36px; 
+  z-index: -100;
+}
+
+p span,
+::before,
+::after {
+  font-family: "Source Serif 4", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: var(--html);
+  text-transform: none;
+}
+
+/*Scroll effect*/
+
+/*Ab hier Content*/
+
+header {
+  height: 100vh;
+  scroll-snap-align: center;
+  padding: 0 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.circle {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  padding: 6px;
+  position: fixed;
+  left: 20px;
+  top: 30px;
+  z-index: 10;
+}
+/*Ab hier Logo*/
+
+/*TEST*/
+
+
+
+
+
+
+
+
+
+
+/*Test ende*/
+
+
+.logo p {
+  text-transform: uppercase;
+  color: var(--main);
+  line-height: 18px;
+  width: 200px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-left: -15px;
+}
+
+/*Navigation*/
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+nav li {
+  padding: 0 35px;
+  cursor: pointer;
+}
+
+nav li:last-child {
+  display: flex;
+  align-items: center;
+}
+
+nav li img {
+  padding-right: 10px;
+  width: 30px;
+}
+
+.active a {
+  font-weight: bold;
+  color: var(--main);
+}
+
+/*Titel im Header*/
+
+header section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 78%;
+  position: relative;
+}
+
+header section h1 {
+  display: flex;
+}
+
+header section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header section h1 span {
+  letter-spacing: 6px;
+  display: block;
+  padding: 0 5px;
+}
+
+header section h1 span:hover {
+  animation: example 0.7s ease 1;
+  color: var(--main);
+}
+
+/*Header Animation*/
+
+@keyframes example {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2, 0.8);
+  }
+
+  40% {
+    transform: scale(0.8, 1.9);
+  }
+
+  60% {
+    transform: scale(1.2, 0.8);
+  }
+
+  80% {
+    transform: scale(0.9, 1.2);
+  }
+}
+
+.space {
+  margin-right: 25px;
+}
+
+header section div::before {
+  content: "<h1>";
+  position: absolute;
+  left: 0px;
+  top: 50px;
+}
+header section div::after {
+  content: "</h1>";
+  position: absolute;
+  left: 0px;
+  bottom: 200px;
+}
+
+.htmlbase {
+  align-self: flex-start;
+  position: relative;
+}
+
+.htmlbase::after {
+  content: "<header>";
+  position: absolute;
+  left: 0px;
+  top: 60px;
+}
+
+header section p::before {
+  content: "<p>";
+  position: absolute;
+  left: 0px;
+  bottom: 170px;
+}
+
+header section p::after {
+  content: "</p>";
+  position: absolute;
+  left: 0px;
+  bottom: 130px;
+}
+
+header section::after {
+  content: "</header>";
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+}
+
+/*Ab hier Main*/
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/*Thats me & my Skills*/
+
+.thats-me {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: center;
+  background: rgb(30, 30, 30);
+  background: linear-gradient(
+    0deg,
+    rgba(30, 30, 30, 1) 0%,
+    rgba(30, 30, 30, 1) 95%,
+    rgba(30, 30, 30, 0) 100%
+  );
+  padding: 0 100px;
+}
+
+.thats-me .html-main {
+  position: absolute;
+  top: 10px;
+}
+
+.thats-me article {
+  width: 50%;
+}
+
+.thats-me::before {
+  content: "<section>";
+  position: absolute;
+  top: 50px;
+}
+
+.thats-me::after {
+  content: "</section>";
+  position: absolute;
+  bottom: 50px;
+}
+
+.thats-me h2 {
+  position: relative;
+  padding-left: 30px;
+}
+
+.thats-me h2::before {
+  content: "<h2>";
+  position: absolute;
+  top: -45px;
+  left: 0px;
+}
+.thats-me h2::after {
+  content: "</h2>";
+  position: absolute;
+  bottom: -45px;
+  left: 0px;
+}
+
+.thats-me-description {
+  position: relative;
+  width: 90%;
+  margin-bottom: 85px;
+  padding-left: 30px;
+}
+.thats-me-description::before {
+  content: "<p>";
+  position: absolute;
+  top: -30px;
+  left: 0px;
+}
+.thats-me-description::after {
+  content: "</p>";
+  position: absolute;
+  bottom: -30px;
+  left: 0px;
+}
+
+.thats-me a {
+  position: relative;
+  width: 90%;
+  margin-left: 30px;
+}
+.thats-me a::before {
+  content: "<a>";
+  position: absolute;
+  top: -35px;
+  left: -30px;
+}
+.thats-me a::after {
+  content: "</a>";
+  position: absolute;
+  bottom: -35px;
+  left: -30px;
+}
+
+/*Work*/
+
+.projects-main-wrapper {
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: center;
+  background-color: var(--background);
+  padding: 0 100px;
+}
+
+.projects-main-wrapper::before {
+  content: "<section>";
+  position: absolute;
+  top: 50px;
+}
+
+.projects-main-wrapper::after {
+  content: "</section>";
+  position: absolute;
+  bottom: 50px;
+}
+
+#full {
+  height: 100%;
+}
+
+.projects {
+  width: 100%;
+  height: 70%;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-article {
+  align-self: center;
+  width: 70%;
+}
+
+.project-counter {
+  width: 10%;
+}
+.project-logo {
+  width: 50%;
+}
+.project-text {
+  width: 40%;
+}
+
+/*3d Effekt*/
+.projects .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  position: relative;
+}
+.projects .element {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+
+  font-family: Sans-serif;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  #el {
+    width: 80%;
+    font-size: 20px;
+  }
+}
+
+/*Work*/
+
+.projects-main-wrapper h2 {
+  margin: 0;
+  padding-top: 140px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.projects-main-wrapper h2::before {
+  content: "<h2>";
+  position: absolute;
+  top: 85px;
+  left: 0px;
+}
+
+.projects-main-wrapper h2::after {
+  content: "</h2>";
+  position: absolute;
+  bottom: -50px;
+  left: 0px;
+}
+
+/*Project Card*/
+
+/*Counter left*/
+.project-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--html);
+}
+
+.project-counter div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.project-counter h3 {
+  font-weight: normal;
+  font-size: 35px;
+}
+
+.project-counter p {
+  text-transform: uppercase;
+}
+
+.project-counter h3:first-child {
+  font-size: 60px;
+}
+.project-counter h3:last-child {
+  margin: 0 0 5px 6px;
+  font-weight: lighter;
+}
+
+.line {
+  height: 60px;
+  width: 2px;
+  background-color: var(--html);
+  margin: 0 10px;
+}
+
+/*logo center*/
+
+.project-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-logo img:first-child {
+  width: 50%;
+}
+
+.project-logo h3 {
+  position: absolute;
+  text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.55);
+}
+
+/*Text area right*/
+.project-description {
+  margin-bottom: 30px;
+}
+.project-role {
+  margin-bottom: 30px;
+}
+
+/*Decoration*/
+.sechseck1,
+.sechseck2,
+.sechseck3,
+.sechseck4,
+.sechseck5 {
+  position: absolute;
+}
+
+.sechseck1 {
+  top: 10%;
+  left: 10%;
+  transform: rotate(200deg);
+  height: 100px;
+}
+
+.sechseck2 {
+  right: 15%;
+  top: -5%;
+  height: 150px;
+  transform: rotate(50deg);
+}
+
+.sechseck3 {
+  right: 5%;
+  bottom: 0%;
+  height: 100px;
+  transform: rotate(100deg);
+}
+
+.sechseck4 {
+  left: 5%;
+  bottom: 0%;
+  height: 120px;
+  transform: rotate(150deg);
+}
