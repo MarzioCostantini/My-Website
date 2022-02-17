@@ -1041,13 +1041,11 @@ header::after {
     display: none;
   }
 
-  .logo p {
-    font-size: 12px;
-  }
+ 
 
   .circle-logo {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     margin-right: 9px;
   }
 
