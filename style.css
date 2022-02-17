@@ -31,8 +31,6 @@ h1 {
   display: inline-block;
 }
 
-
-
 h2 {
   font-size: 50px;
 }
@@ -245,7 +243,6 @@ nav li img {
 
 /*Titel im Header*/
 
-
 header section {
   display: flex;
   justify-content: center;
@@ -259,10 +256,6 @@ header section h1 {
   display: block;
   text-align: center;
 }
-
-
-
-
 
 h1 span,
 h2 span {
@@ -280,7 +273,7 @@ h2 span {
 }
 
 h1 span:hover,
-h2 span:hover{
+h2 span:hover {
   color: var(--main);
   animation: jumpe 0.7s ease 1;
   display: inline-block;
@@ -298,7 +291,7 @@ h2 span:hover{
 
   40% {
     transform: scale(0.8, 1.9);
-   color: var(--main);
+    color: var(--main);
   }
 
   60% {
@@ -340,8 +333,7 @@ h2 span:hover{
 
 /*Jump Animation ende*/
 
-
-.title-wrapper{
+.title-wrapper {
   position: relative;
   display: block;
   width: 100%;
@@ -397,7 +389,6 @@ header::after {
   content: "</header>";
   position: absolute;
   bottom: 15px;
-
 }
 
 /*Ab hier Main*/
@@ -758,15 +749,12 @@ header::after {
   color: green;
 }
 
-
-
 /*Desktop klein*/
 @media screen and (max-width: 1200px) {
   h1 {
     font-size: 65px;
   }
 }
-
 
 /*tablet*/
 @media screen and (max-width: 768px) {
@@ -957,10 +945,11 @@ header::after {
 
   .project-img {
     margin: 0 auto 30px auto;
-  height: auto;
+    max-width: 50%;
   }
+
   .project-counter {
-   display: none;
+    display: none;
   }
   .projects-article {
     width: 100%;
@@ -981,21 +970,10 @@ header::after {
     display: none;
   }
 
-  .project-counter h3:first-child{
-    font-size: 30px;
+  .deko{
+    opacity: 0.3;
   }
-  .project-counter h3:last-child {
-    font-size: 25px;
-  }
-  .line{
-    height: 30px;
-  }
-  .project-counter p{
-    font-size: 14px;
-  }
-  .project-counter div{
-    margin-bottom: 5px;
-  }
+
 }
 
 /*handy*/
@@ -1077,8 +1055,9 @@ header::after {
 
   /*Header*/
 
-  .title-wrapper::before, .title-wrapper::after{
-    display: none
+  .title-wrapper::before,
+  .title-wrapper::after {
+    display: none;
   }
   header section div::after {
     bottom: 190px;
