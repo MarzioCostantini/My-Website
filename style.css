@@ -28,12 +28,13 @@ img {
 
 h1 {
   font-size: 80px;
-  letter-spacing: 10px;
+  display: inline-block;
 }
+
+
 
 h2 {
   font-size: 50px;
-  line-height: 60px;
 }
 
 h3 {
@@ -46,6 +47,7 @@ h4 {
   color: var(--white);
   margin-bottom: 30px;
 }
+
 h5 {
   font-size: 50px;
   font-weight: lighter;
@@ -90,6 +92,8 @@ header {
   height: 100vh;
   scroll-snap-align: center;
   padding: 0 100px;
+  overflow: hidden;
+  position: relative;
 }
 
 nav {
@@ -241,9 +245,6 @@ nav li img {
 
 /*Titel im Header*/
 
-header {
-  overflow: hidden;
-}
 
 header section {
   display: flex;
@@ -255,23 +256,17 @@ header section {
 }
 
 header section h1 {
-  display: flex;
+  display: block;
+  text-align: center;
 }
 
-header section div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-/*Jump Animation*/
+
+
 
 h1 span,
 h2 span {
   letter-spacing: 6px;
-  display: block;
-  padding: 0 5px;
 }
 
 .scrollanimation {
@@ -281,14 +276,17 @@ h2 span {
 .sichtbar {
   opacity: 1;
   animation: jumpescroll 0.7s ease 1 0.2s;
+  display: inline-block;
 }
 
 h1 span:hover,
-h2 span:hover {
+h2 span:hover{
   color: var(--main);
   animation: jumpe 0.7s ease 1;
+  display: inline-block;
 }
 
+/*Jump Animation*/
 @keyframes jumpe {
   0%,
   100% {
@@ -300,14 +298,17 @@ h2 span:hover {
 
   40% {
     transform: scale(0.8, 1.9);
+   color: var(--main);
   }
 
   60% {
     transform: scale(1.2, 0.8);
+    color: var(--main);
   }
 
   80% {
     transform: scale(0.9, 1.2);
+    color: var(--main);
   }
 }
 
@@ -339,21 +340,24 @@ h2 span:hover {
 
 /*Jump Animation ende*/
 
-.h2 h2 {
-  display: flex;
+
+.title-wrapper{
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
-header section div::before {
+.title-wrapper:before {
   content: "<h1>";
   position: absolute;
   left: 0px;
-  top: 50px;
+  top: 0px;
 }
-header section div::after {
+.title-wrapper::after {
   content: "</h1>";
   position: absolute;
   left: 0px;
-  bottom: 70px;
+  bottom: 0px;
 }
 
 .htmlbase {
@@ -368,25 +372,32 @@ header section div::after {
   top: 63px;
 }
 
+.sub-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 header section p::before {
   content: "<p>";
   position: absolute;
   left: 0px;
-  bottom: 40px;
+  top: 0px;
 }
 
 header section p::after {
   content: "</p>";
   position: absolute;
   left: 0px;
-  bottom: 10px;
+  bottom: -30px;
 }
 
-header section::after {
+header::after {
   content: "</header>";
   position: absolute;
-  bottom: -15px;
-  left: 0px;
+  bottom: 15px;
+
 }
 
 /*Ab hier Main*/
@@ -747,11 +758,20 @@ header section::after {
   color: green;
 }
 
+
+
+/*Desktop klein*/
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 65px;
+  }
+}
+
+
 /*tablet*/
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 50px;
-    letter-spacing: 10px;
   }
 
   h2 {
@@ -831,6 +851,7 @@ header section::after {
 
   .title-wrapper {
     margin-bottom: 30px;
+    position: relative;
   }
 
   header section p::before {
@@ -913,11 +934,11 @@ header section::after {
   }
 
   .projects-main-wrapper h2::before {
-    top: 20px;
+    top: 35px;
   }
 
   .projects-main-wrapper h2::after {
-    bottom: -30px;
+    bottom: -17px;
   }
 
   .projects-main-wrapper h2 {
@@ -939,7 +960,7 @@ header section::after {
     height: 160px;
   }
   .project-counter {
-    margin: auto;
+    margin: 0 auto 20px auto;
   }
   .projects-article {
     width: 100%;
@@ -959,19 +980,28 @@ header section::after {
   .project-text h5 {
     display: none;
   }
+
+  .project-counter h3:first-child{
+    font-size: 30px;
+  }
+  .project-counter h3:last-child {
+    font-size: 25px;
+  }
+  .line{
+    height: 30px;
+  }
+  .project-counter p{
+    font-size: 14px;
+  }
+  .project-counter div{
+    margin-bottom: 5px;
+  }
 }
-
-
-
-
-
-
 
 /*handy*/
 @media screen and (max-width: 576px) {
   h1 {
     font-size: 30px;
-    letter-spacing: 10px;
   }
 
   h2 {
@@ -1046,76 +1076,59 @@ header section::after {
   /*General settings end*/
 
   /*Header*/
-  header section div::after{
-  bottom: 190px;
+
+  .title-wrapper::before, .title-wrapper::after{
+    display: none
+  }
+  header section div::after {
+    bottom: 190px;
   }
 
   header section p::before {
-    bottom: 160px;
-}
+    display: none;
+  }
 
-header section p::after {
-  bottom: 115px;
-}
+  header section p::after {
+    display: none;
+  }
 
-header section div::before {
-  top: 113px;
-}
+  header section div::before {
+    top: 113px;
+  }
 
-header section::after {
-  bottom: -130px;
-}
   /*thats me*/
-
- 
 
   .thats-me {
     display: block;
   }
 
-  .first-article{
+  .first-article {
     padding-top: 60px;
     margin-bottom: 30px;
   }
   .thats-me article {
     width: 100%;
   }
-
- 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*handy SEHR KLEIN*/
 @media screen and (max-width: 425px) {
-h1 {
-  font-size: 20px;
-}
-header section div::before {
-  top: 150px;
-}
-header section div::after {
-  bottom: 220px;
-}
-header section p::before {
-  bottom: 193px;
-}
-header section p::after {
-  bottom: 145px;
-}
-header section::after {
-  bottom: -130px; 
-}
-/*test*/
+  h1 {
+    font-size: 20px;
+  }
+  header section div::before {
+    top: 150px;
+  }
+  header section div::after {
+    bottom: 220px;
+  }
+  header section p::before {
+    bottom: 193px;
+  }
+  header section p::after {
+    bottom: 145px;
+  }
+  header section::after {
+    bottom: -130px;
+  }
 }
