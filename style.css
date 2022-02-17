@@ -136,6 +136,10 @@ nav ul {
   position: relative;
 }
 
+header a {
+  text-decoration: none;
+}
+
 nav ul a {
   color: var(--white);
   text-decoration: none;

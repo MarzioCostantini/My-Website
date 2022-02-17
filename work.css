@@ -105,6 +105,10 @@ nav {
   padding: 40px 0;
 }
 
+header a {
+  text-decoration: none;
+}
+
 .circle-logo {
   background-color: white;
   height: 50px;
