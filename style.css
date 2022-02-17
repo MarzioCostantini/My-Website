@@ -806,9 +806,7 @@ header::after {
     opacity: 0.5;
   }
 
-  .wrapper {
-    padding: 0 15px;
-  }
+ 
 
   h1 span,
   h2 span {
@@ -821,9 +819,6 @@ header::after {
     display: none;
   }
 
-  .wrapper {
-    padding: 0 15px;
-  }
 
   /*General settings end*/
 
@@ -857,7 +852,7 @@ header::after {
   header,
   .thats-me,
   .projects-main-wrapper {
-    padding: 0;
+    padding: 0 30px;
   }
 
   /*Main*/
@@ -929,6 +924,9 @@ header::after {
     bottom: -17px;
   }
 
+  .project-img {
+    margin: 0 auto 30px auto;
+  }
   .projects-main-wrapper h2 {
     padding-top: 50px;
     padding-left: 0;
@@ -942,19 +940,6 @@ header::after {
   .project-text {
     width: 100%;
   }
-
-  .project-img {
-    margin: 0 auto 20px auto;
-    max-width: 130px;
-    height: 122px;
-  }
-
-  .project-description {
-    margin-bottom: 20px;
-}
-.project-role {
-  margin-bottom: 20px;
-}
 
   .project-counter {
     display: none;
@@ -1034,9 +1019,7 @@ header::after {
     opacity: 0.5;
   }
 
-  .wrapper {
-    padding: 0 30px;
-  }
+
 
   h1 span,
   h2 span {
@@ -1094,13 +1077,27 @@ header::after {
   .thats-me article {
     width: 100%;
   }
+
+  /*Work*/
+  .project-img {
+    margin: 0 auto 20px auto;
+    max-width: 130px;
+    height: 122px;
+  }
+
+  .project-description {
+    margin-bottom: 20px;
+}
+.project-role {
+  margin-bottom: 20px;
+}
 }
 
 /*handy SEHR KLEIN*/
 @media screen and (max-width: 425px) {
   h1 {
-    font-size: 28px;
-    letter-spacing: -12px;
+    font-size: 22px;
+    
   }
   header section div::before {
     top: 150px;
