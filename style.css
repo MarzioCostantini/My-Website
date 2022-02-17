@@ -957,10 +957,10 @@ header::after {
 
   .project-img {
     margin: 0 auto 30px auto;
-    height: 160px;
+  height: auto;
   }
   .project-counter {
-    margin: 0 auto 20px auto;
+   display: none;
   }
   .projects-article {
     width: 100%;
