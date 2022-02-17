@@ -14,7 +14,6 @@ body {
   color: var(--white);
   font-family: Poppins, Arial, Helvetica, sans-serif;
   overflow: hidden;
-  
 }
 
 * {
@@ -35,7 +34,6 @@ h1 {
 h2 {
   font-size: 50px;
   line-height: 60px;
-  margin-bottom: 60px;
 }
 
 h3 {
@@ -67,12 +65,12 @@ p {
   text-decoration: none;
 }
 
-.circle-mouse{
+.circle-mouse {
   width: 50px;
-  height:50px;
+  height: 50px;
   position: absolute;
   border: 1px solid #000;
-  border-radius: 36px; 
+  border-radius: 36px;
   z-index: -100;
 }
 
@@ -86,7 +84,7 @@ p span,
   text-transform: none;
 }
 
-/*Scroll effect*/
+
 
 /*Ab hier Content*/
 
@@ -102,7 +100,7 @@ nav {
   padding: 40px 0;
 }
 
-.circle {
+.circle-logo {
   background-color: white;
   height: 50px;
   width: 50px;
@@ -111,26 +109,16 @@ nav {
   align-items: center;
   border-radius: 50px;
   padding: 6px;
-  position: fixed;
-  left: 20px;
-  top: 30px;
   z-index: 10;
+  margin-right: 15px;
 }
 /*Ab hier Logo*/
 
-/*TEST*/
-
-
-
-
-
-
-
-
-
-
-/*Test ende*/
-
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .logo p {
   text-transform: uppercase;
@@ -139,7 +127,6 @@ nav {
   width: 200px;
   font-weight: 700;
   letter-spacing: 5px;
-  margin-left: -15px;
 }
 
 /*Navigation*/
@@ -148,6 +135,7 @@ nav ul {
   display: flex;
   align-items: center;
   list-style: none;
+  position: relative;
 }
 
 nav ul a {
@@ -175,7 +163,85 @@ nav li img {
   color: var(--main);
 }
 
+/*Swing line light*/
+
+.g-line {
+  position: absolute;
+  right: -130px;
+  top: -50px;
+  width: 100px;
+  height: 150px;
+  border: 1px solid var(--white);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  transform-origin: 0 0;
+  animation: lineMove 6s ease-in-out 1;
+  cursor: pointer;
+}
+
+.g-line:hover {
+  border-color: var(--main);
+}
+
+.g-line:hover .g-line-kugel{
+  background-color: var(--main);
+}
+
+.g-line-kugel {
+  background-color: var(--white);
+  height: 12px;
+  width: 12px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0px;
+  left: -7px;
+}
+
+@keyframes lineMove {
+  0% {
+    width: 100px;
+    transform: rotate(-30deg);
+  }
+
+  14.28% {
+    width: 100px;
+    transform: rotate(25deg);
+  }
+  28.56% {
+    width: 100px;
+    transform: rotate(-20deg);
+  }
+  42.84% {
+    width: 100px;
+    transform: rotate(15deg);
+  }
+  57.12% {
+    width: 100px;
+    transform: rotate(-10deg);
+  }
+
+  71.40% {
+    width: 100px;
+    transform: rotate(5deg);
+  }
+
+  85.68% {
+    width: 100px;
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    width: 100px;
+    transform: rotate(0deg);
+  }
+}
+
 /*Titel im Header*/
+
+header {
+  overflow: hidden;
+}
 
 header section {
   display: flex;
@@ -196,20 +262,56 @@ header section div {
   align-items: center;
   flex-direction: column;
 }
-header section h1 span {
+
+/*Jump Animation*/
+
+h1 span,
+h2 span {
   letter-spacing: 6px;
   display: block;
   padding: 0 5px;
 }
 
-header section h1 span:hover {
-  animation: example 0.7s ease 1;
-  color: var(--main);
+.scrollanimation {
+  opacity: 0;
+ 
 }
 
-/*Header Animation*/
+.sichtbar {
+  opacity: 1;
+  animation: jumpescroll 0.7s ease 1 .2s;
+}
 
-@keyframes example {
+
+h1 span:hover,
+h2 span:hover {
+  color: var(--main);
+  animation: jumpe 0.7s ease 1;
+}
+
+@keyframes jumpe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2, 0.8);
+  }
+
+  40% {
+    transform: scale(0.8, 1.9);
+  }
+
+  60% {
+    transform: scale(1.2, 0.8);
+  }
+
+  80% {
+    transform: scale(0.9, 1.2);
+  }
+} 
+
+@keyframes jumpescroll {
   0%,
   100% {
     transform: scale(1);
@@ -234,6 +336,58 @@ header section h1 span:hover {
 .space {
   margin-right: 25px;
 }
+
+
+/*Jump Animation ende*/
+
+/* header section h1 span,
+h2 span {
+  letter-spacing: 6px;
+  display: block;
+  padding: 0 5px;
+}
+
+header section h1 span:hover,
+h2 span:hover {
+  animation: jump 0.7s ease 1;
+  color: var(--main);
+} */
+
+.h2 {
+  margin-bottom: 60px;
+}
+
+.h2 h2 {
+  display: flex;
+}
+
+/*Header Animation*/
+
+/* @keyframes jump {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2, 0.8);
+  }
+
+  40% {
+    transform: scale(0.8, 1.9);
+  }
+
+  60% {
+    transform: scale(1.2, 0.8);
+  }
+
+  80% {
+    transform: scale(0.9, 1.2);
+  }
+}
+
+.space {
+  margin-right: 25px;
+} */
 
 header section div::before {
   content: "<h1>";
@@ -332,15 +486,16 @@ header section::after {
 .thats-me h2 {
   position: relative;
   padding-left: 30px;
+  display: flex;
 }
 
-.thats-me h2::before {
+.h2::before {
   content: "<h2>";
   position: absolute;
   top: -45px;
   left: 0px;
 }
-.thats-me h2::after {
+.h2::after {
   content: "</h2>";
   position: absolute;
   bottom: -45px;
@@ -408,6 +563,9 @@ header section::after {
 
 #full {
   height: 100%;
+}
+.project-img {
+  max-width: 30%;
 }
 
 .projects {
@@ -492,6 +650,7 @@ header section::after {
   align-items: center;
   flex-direction: column;
   color: var(--html);
+  margin-right: 100px;
 }
 
 .project-counter div {
@@ -527,21 +686,60 @@ header section::after {
 
 /*logo center*/
 
-.project-logo {
+.project-img {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-right: 100px;
+  position: relative;
+  width: 250px;
+  height: 180px;
 }
 
-.project-logo img:first-child {
-  width: 50%;
-}
-
-.project-logo h3 {
+.project-img img {
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.502);
   position: absolute;
-  text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.55);
+  filter: grayscale(10%) brightness(80%);
 }
+
+
+/*Bild 1*/
+.project-img img:nth-child(1){
+  bottom: 0px;
+  left: 0px;
+}
+/*Bild 2*/
+.project-img img:nth-child(2){
+  bottom: 10px;
+  left: 10px;
+}
+/*Bild 3*/
+.project-img img:nth-child(3){
+  bottom: 20px;
+  left: 20px;
+}
+
+ 
+/*Animation*/
+.project-img:hover img:nth-child(1){
+  transition: all .5s ease;
+  bottom: -130px;
+  filter: grayscale(0%)brightness(100%);
+}
+.project-img:hover img:nth-child(2){
+  transition: all .5s ease;
+  filter: grayscale(0%) brightness(100%);
+}
+.project-img:hover img:nth-child(3){
+  transition: all .5s ease;
+  bottom: 140px;
+  filter: grayscale(0%) brightness(100%);
+}
+
+
+
 
 /*Text area right*/
 .project-description {
@@ -586,4 +784,14 @@ header section::after {
   bottom: 0%;
   height: 120px;
   transform: rotate(150deg);
+}
+
+/*DARKMODE*/
+.dark-mode{
+  color: red;
+  background-color: white;
+}
+
+.h1-dark {
+  color: green;
 }

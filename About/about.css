@@ -1,0 +1,541 @@
+:root {
+  --main: #cba422;
+  --background: #1e1e1e;
+  --white: #f4f4f4;
+  --html: rgba(255, 255, 255, 0.214);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--white);
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  /* overflow: hidden; */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 55px;
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 40px;
+  font-weight: lighter;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+h5 {
+  font-size: 50px;
+  font-weight: lighter;
+  color: var(--html);
+  margin-bottom: 30px;
+}
+
+h6 {
+  font-size: 20px;
+  color: var(--main);
+}
+p {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.btn {
+  border: 1px solid var(--white);
+  padding: 15px 25px;
+  color: var(--white);
+  font-size: 14px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.circle-mouse {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 36px;
+  z-index: -100;
+}
+
+p span,
+::before,
+::after {
+  font-family: "Source Serif 4", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  color: var(--html);
+  text-transform: none;
+}
+
+header {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.wrapper {
+  padding: 0 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.circle-logo {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  padding: 6px;
+  z-index: 10;
+  margin-right: 15px;
+}
+/*Ab hier Logo*/
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo p {
+  text-transform: uppercase;
+  color: var(--main);
+  line-height: 18px;
+  width: 200px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+/*Navigation*/
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+
+nav ul a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+nav li {
+  padding: 0 35px;
+  cursor: pointer;
+}
+
+nav li:last-child {
+  display: flex;
+  align-items: center;
+}
+
+nav li img {
+  padding-right: 10px;
+  width: 30px;
+}
+
+.active a {
+  font-weight: bold;
+  color: var(--main);
+}
+
+/*Swing line light*/
+
+.g-line {
+  position: absolute;
+  right: -130px;
+  top: -50px;
+  width: 100px;
+  height: 150px;
+  border: 1px solid var(--white);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  transform-origin: 0 0;
+  cursor: pointer;
+}
+
+.g-line:hover {
+  border-color: var(--main);
+}
+
+.g-line:hover .g-line-kugel {
+  background-color: var(--main);
+}
+
+.g-line-kugel {
+  background-color: var(--white);
+  height: 12px;
+  width: 12px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0px;
+  left: -7px;
+}
+
+/*Titel im Header*/
+
+header h1 {
+  display: flex;
+  position: relative;
+  padding: 15px 0;
+}
+
+section h2 {
+  display: flex;
+  margin-top: 30px;
+  position: relative;
+}
+
+header section h1::before {
+  content: "<h1>";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+header section h1::after {
+  content: "</h1>";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+/*Jump Animation*/
+
+h1 span,
+h2 span {
+  letter-spacing: 6px;
+  display: block;
+  padding: 0 5px;
+}
+
+.scrollanimation {
+  opacity: 0;
+}
+
+.sichtbar {
+  opacity: 1;
+  animation: jumpescroll 0.7s ease 1;
+}
+
+h1 span:hover,
+h2 span:hover {
+  color: var(--main);
+  animation: jumpe 0.7s ease 1;
+}
+
+@keyframes jumpe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2, 0.8);
+  }
+
+  40% {
+    transform: scale(0.8, 1.9);
+  }
+
+  60% {
+    transform: scale(1.2, 0.8);
+  }
+
+  80% {
+    transform: scale(0.9, 1.2);
+  }
+}
+
+@keyframes jumpescroll {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2, 0.8);
+  }
+
+  40% {
+    transform: scale(0.8, 1.9);
+  }
+
+  60% {
+    transform: scale(1.2, 0.8);
+  }
+
+  80% {
+    transform: scale(0.9, 1.2);
+  }
+}
+
+.space {
+  margin-right: 25px;
+}
+
+/*Jump Animation ende*/
+
+.htmlbase {
+  align-self: flex-start;
+  position: relative;
+}
+
+.htmlbase::after {
+  content: "<header>";
+  position: absolute;
+  left: 0px;
+  top: 60px;
+}
+
+
+
+header::before {
+  content: "<header>";
+  position: absolute;
+  top: 100px;
+}
+header:after {
+  content: "</header>";
+  position: absolute;
+  bottom: 30px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-around;
+  height: 70%;
+}
+
+.header-wrapper article {
+  width: 50%;
+  align-self: center;
+}
+
+.title-wrapper {
+  margin-bottom: 60px;
+}
+
+/*AVATAR*/
+
+.avatar {
+  position: relative;
+}
+
+.avatar-img {
+  width: 450px;
+}
+
+.eye-wrapper img {
+  position: absolute;
+  width: 24px;
+  height: auto;
+}
+
+.eye-wrapper {
+  position: absolute;
+  top: 95px;
+  left: 48px;
+  display: flex;
+  transform: rotate(350deg);
+}
+
+.eye-wrapper div {
+
+  width: 44px;
+  height: 33px;
+  position: relative;
+  margin: 21px;
+  border-radius: 100%;
+}
+
+/*My Skills*/
+
+main section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section article {
+  width: 40%;
+}
+
+/*SkillBar*/
+.bar-wrapper {
+  margin-bottom: 15px;
+}
+
+.bar-wrapper h6 {
+  margin-bottom: 15px;
+}
+
+.bar-wrapper-full {
+  width: 100%;
+  height: 15px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+/*HTML*/
+.bar-inner-html {
+  background-color: var(--main);
+  width: 20%;
+  height: 15px;
+  border-radius: 20px;
+  /* animation: skills-html 1.5s ease-in-out 1; */
+}
+
+@keyframes skills-html {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+/*CSS*/
+.bar-inner-css {
+  background-color: var(--main);
+  width: 80%;
+  height: 15px;
+  border-radius: 20px;
+  /* animation: skills-css 1.7s ease-in-out 1; */
+}
+
+@keyframes skills-css {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/*JS*/
+.bar-inner-js {
+  background-color: var(--main);
+  width: 75%;
+  height: 15px;
+  border-radius: 20px;
+  /* animation: skills-js 1.8s ease-in-out 1; */
+}
+
+@keyframes skills-js {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+/*React*/
+.bar-inner-react {
+  background-color: var(--main);
+  width: 70%;
+  height: 15px;
+  border-radius: 20px;
+  /* animation: skills-react 1.9s ease-in-out 1; */
+}
+
+@keyframes skills-react {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+/*wordpress*/
+.bar-inner-wordpress {
+  background-color: var(--main);
+  width: 85%;
+  height: 15px;
+  border-radius: 20px;
+  /* animation: skills-wordpress 1.9s ease-in-out 1; */
+}
+
+@keyframes skills-wordpress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+/*UI*/
+.bar-inner-ui {
+  background-color: var(--main);
+  width: 85%;
+  height: 15px;
+  border-radius: 20px;
+  /* animation: skills-ui 2s ease-in-out 1; */
+}
+
+@keyframes skills-ui {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+/*XD*/
+.bar-inner-xd {
+  background-color: var(--main);
+  width: 100%;
+  height: 15px;
+  border-radius: 20px;
+  /* animation: skills-xd 2.1s ease-in-out 1; */
+}
+
+@keyframes skills-xd {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/*PS*/
+.bar-inner-ps {
+  background-color: var(--main);
+  width: 85%;
+  height: 15px;
+  border-radius: 20px;
+  /* animation: skills-ps 2.2s ease-in-out 1; */
+}
+
+@keyframes skills-ps {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
