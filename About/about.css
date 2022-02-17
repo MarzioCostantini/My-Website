@@ -160,46 +160,19 @@ nav li img {
   color: var(--main);
 }
 
-/*Swing line light*/
-
-.g-line {
-  position: absolute;
-  right: -130px;
-  top: -50px;
-  width: 100px;
-  height: 150px;
-  border: 1px solid var(--white);
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  transform-origin: 0 0;
-  cursor: pointer;
-}
-
-.g-line:hover {
-  border-color: var(--main);
-}
-
-.g-line:hover .g-line-kugel {
-  background-color: var(--main);
-}
-
-.g-line-kugel {
-  background-color: var(--white);
-  height: 12px;
-  width: 12px;
-  border-radius: 50px;
-  position: absolute;
-  bottom: 0px;
-  left: -7px;
-}
-
 /*Titel im Header*/
+
+.wrapper {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
 
 header h1 {
   display: flex;
   position: relative;
   padding: 15px 0;
+  margin-top: 30px;
 }
 
 section h2 {
@@ -219,6 +192,42 @@ header section h1::after {
   position: absolute;
   left: 0px;
   bottom: 0px;
+}
+
+.my-skills .title-wrapper h2 {
+  position: relative;
+  padding-left: 30px;
+}
+
+.my-skills .title-wrapper h2::before {
+  content: "<h2>";
+  position: absolute;
+  left: 0px;
+  top: -50px;
+}
+.my-skills .title-wrapper h2::after {
+  content: "</h2>";
+  position: absolute;
+  left: 0px;
+  bottom: -50px;
+}
+
+.my-skills-text {
+  position: relative;
+  padding-left: 30px;
+}
+
+.my-skills-text::before {
+  content: "<p>";
+  position: absolute;
+  left: 0px;
+  top: -30px;
+}
+.my-skills-text::after {
+  content: "</p>";
+  position: absolute;
+  left: 0px;
+  bottom: -30px;
 }
 
 /*Jump Animation*/
@@ -297,27 +306,41 @@ h2 span:hover {
 
 .htmlbase {
   align-self: flex-start;
+  position: absolute;
+  top: 10px;
+}
+
+header {
   position: relative;
 }
-
-.htmlbase::after {
-  content: "<header>";
-  position: absolute;
-  left: 0px;
-  top: 60px;
-}
-
-
 
 header::before {
   content: "<header>";
   position: absolute;
-  top: 100px;
+  top: 120px;
 }
 header:after {
   content: "</header>";
   position: absolute;
   bottom: 30px;
+}
+
+.my-skills {
+  position: relative;
+}
+
+main {
+  position: relative;
+  scroll-snap-align: center;
+  height: 100vh;
+  display: flex;
+}
+
+main::after {
+  content: "</main>";
+  position: absolute;
+  bottom: 30px;
+  align-self: flex-start;
 }
 
 .header-wrapper {
@@ -327,7 +350,6 @@ header:after {
 }
 
 .header-wrapper article {
-  width: 50%;
   align-self: center;
 }
 
@@ -339,6 +361,12 @@ header:after {
 
 .avatar {
   position: relative;
+}
+
+.avatar-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar-img {
@@ -353,14 +381,13 @@ header:after {
 
 .eye-wrapper {
   position: absolute;
-  top: 95px;
+  top: 113px;
   left: 48px;
   display: flex;
   transform: rotate(350deg);
 }
 
 .eye-wrapper div {
-
   width: 44px;
   height: 33px;
   position: relative;
@@ -370,14 +397,18 @@ header:after {
 
 /*My Skills*/
 
-main section {
+.my-skills {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-main section article {
-  width: 40%;
+.my-skills article:nth-child(2) {
+  margin-right: 60px;
+}
+
+.my-skills article {
+  width: 50%;
 }
 
 /*SkillBar*/
@@ -537,5 +568,310 @@ main section article {
   }
   to {
     width: 85%;
+  }
+}
+
+/*RESPONSIVE*/
+
+/*small desk*/
+@media screen and (max-width: 1111px) {
+  .avatar-img {
+    width:270px;
+    margin-right: 20px;
+}
+.eye-wrapper{
+  top: 71px;
+  left: 31px;
+}
+.eye-wrapper div {
+  width: 36px;
+  height: 23px;
+  margin: 7px;  
+}
+
+.eye-wrapper img {
+  width: 16px;
+}
+
+header h2 {
+  font-size: 40px;
+}
+
+}
+
+
+/*tablet*/
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  header section h2 {
+    margin: 15px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--white);
+    margin-bottom: 30px;
+  }
+  h5 {
+    font-size: 35px;
+    font-weight: lighter;
+    color: var(--html);
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    font-size: 18px;
+    color: var(--main);
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  p span,
+  ::before,
+  ::after {
+    font-family: "Source Serif 4", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0;
+    color: var(--html);
+    text-transform: none;
+    opacity: 0.5;
+  }
+
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  h1 span,
+  h2 span {
+    letter-spacing: 6px;
+    display: block;
+    padding: 0 0px;
+  }
+
+  nav ul {
+    display: none;
+  }
+  /*General settings end*/
+
+  /*AVATAR*/
+
+  .avatar {
+    position: relative;
+  }
+
+  .avatar-img {
+    width: 250px;
+    margin-right: 15px;
+  }
+
+  .eye-wrapper img {
+    position: absolute;
+    width: 13px;
+    height: auto;
+  }
+
+  .eye-wrapper {
+    position: absolute;
+    top: 65px;
+    left: 28px;
+    display: flex;
+    transform: rotate(350deg);
+  }
+
+  .eye-wrapper div {
+    width: 26px;
+    height: 17px;
+    position: relative;
+    margin: 10px;
+    border-radius: 100%;
+  }
+
+  /*MY Skills*/
+
+  .my-skills article:nth-child(2) {
+    margin-right: 30px;
+  }
+}
+
+/*handy*/
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  header section h2 {
+    margin: 10px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--white);
+    margin-bottom: 30px;
+  }
+  h5 {
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--html);
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    font-size: 16px;
+    color: var(--main);
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  p span,
+  ::before,
+  ::after {
+    font-family: "Source Serif 4", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: var(--html);
+    text-transform: none;
+    opacity: 0.5;
+  }
+
+  .wrapper {
+    padding: 0 30px;
+  }
+
+  h1 span,
+  h2 span {
+    letter-spacing: 6px;
+    display: block;
+    padding: 0 0px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .logo p {
+    font-size: 12px;
+  }
+
+  .circle-logo {
+    height: 30px;
+    width: 30px;
+    margin-right: 9px;
+  }
+
+  /*General settings end*/
+
+  /*Header*/
+
+  .header-wrapper {
+    display: block;
+  }
+
+  .title-wrapper {
+    margin: 0 0 30px 0;
+  }
+
+  .header-wrapper article:not(.eye-wrapper) {
+  margin: auto;
+  }
+
+  header section h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}   
+
+/*AVATAR*/
+
+  /*MY Skills*/
+
+  .my-skills {
+    display: block;
+  }
+
+  .my-skills article{
+    width: 100%;
+  }
+
+  .my-skills .title-wrapper h2{
+    padding: 20px 0 0 0;
+    margin: 90px 0 45px 0 ;
+  }
+
+  .my-skills-text{
+    padding-left: 0;
+    margin-bottom: 45px;
+  }
+
+  .my-skills article:nth-child(2) {
+    margin-right: 30px;
+  }
+
+  section h2{
+    margin: 0 0 30px 0;
+  }
+
+  .my-skills .title-wrapper h2::before {
+    top: -15px;
+  }
+
+  .my-skills .title-wrapper h2::after {
+    bottom: -32px;
+  }
+
+  /*Bar*/
+
+  .bar-wrapper-full{
+    height: 10px;
+  }
+
+  .bar-height{
+    height: 10px;
+  }
+
+  .bar-wrapper h6{
+    margin-bottom: 2px;
+  }
+
+  main::after{
+    bottom: 15px;
+  }
+
+  .htmlbase{
+    display: none;
+  }
+  main {
+    display: block;
   }
 }

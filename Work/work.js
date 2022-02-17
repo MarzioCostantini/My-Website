@@ -12,7 +12,7 @@ const observer = new IntersectionObserver(
 animierteElemente.forEach((eintrag)=> {
     observer.observe(eintrag)
 })
-
+ 
 
 /*1*/
 const el = document.querySelector(".element");

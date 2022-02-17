@@ -84,8 +84,6 @@ p span,
   text-transform: none;
 }
 
-
-
 /*Ab hier Content*/
 
 header {
@@ -184,7 +182,7 @@ nav li img {
   border-color: var(--main);
 }
 
-.g-line:hover .g-line-kugel{
+.g-line:hover .g-line-kugel {
   background-color: var(--main);
 }
 
@@ -248,7 +246,7 @@ header section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 78%;
+  height: 70%;
   position: relative;
 }
 
@@ -274,14 +272,12 @@ h2 span {
 
 .scrollanimation {
   opacity: 0;
- 
 }
 
 .sichtbar {
   opacity: 1;
-  animation: jumpescroll 0.7s ease 1 .2s;
+  animation: jumpescroll 0.7s ease 1 0.2s;
 }
-
 
 h1 span:hover,
 h2 span:hover {
@@ -309,7 +305,7 @@ h2 span:hover {
   80% {
     transform: scale(0.9, 1.2);
   }
-} 
+}
 
 @keyframes jumpescroll {
   0%,
@@ -337,57 +333,11 @@ h2 span:hover {
   margin-right: 25px;
 }
 
-
 /*Jump Animation ende*/
-
-/* header section h1 span,
-h2 span {
-  letter-spacing: 6px;
-  display: block;
-  padding: 0 5px;
-}
-
-header section h1 span:hover,
-h2 span:hover {
-  animation: jump 0.7s ease 1;
-  color: var(--main);
-} */
-
-.h2 {
-  margin-bottom: 60px;
-}
 
 .h2 h2 {
   display: flex;
 }
-
-/*Header Animation*/
-
-/* @keyframes jump {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.2, 0.8);
-  }
-
-  40% {
-    transform: scale(0.8, 1.9);
-  }
-
-  60% {
-    transform: scale(1.2, 0.8);
-  }
-
-  80% {
-    transform: scale(0.9, 1.2);
-  }
-}
-
-.space {
-  margin-right: 25px;
-} */
 
 header section div::before {
   content: "<h1>";
@@ -399,7 +349,7 @@ header section div::after {
   content: "</h1>";
   position: absolute;
   left: 0px;
-  bottom: 200px;
+  bottom: 70px;
 }
 
 .htmlbase {
@@ -411,27 +361,27 @@ header section div::after {
   content: "<header>";
   position: absolute;
   left: 0px;
-  top: 60px;
+  top: 63px;
 }
 
 header section p::before {
   content: "<p>";
   position: absolute;
   left: 0px;
-  bottom: 170px;
+  bottom: 40px;
 }
 
 header section p::after {
   content: "</p>";
   position: absolute;
   left: 0px;
-  bottom: 130px;
+  bottom: 10px;
 }
 
 header section::after {
   content: "</header>";
   position: absolute;
-  bottom: 30px;
+  bottom: -15px;
   left: 0px;
 }
 
@@ -483,22 +433,24 @@ header section::after {
   bottom: 50px;
 }
 
-.thats-me h2 {
+.thats-me .h2 {
   position: relative;
   padding-left: 30px;
   display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
 }
 
-.h2::before {
+.thats-me .h2::before {
   content: "<h2>";
   position: absolute;
-  top: -45px;
+  top: -35px;
   left: 0px;
 }
-.h2::after {
+.thats-me .h2::after {
   content: "</h2>";
   position: absolute;
-  bottom: -45px;
+  bottom: -35px;
   left: 0px;
 }
 
@@ -704,42 +656,37 @@ header section::after {
   filter: grayscale(10%) brightness(80%);
 }
 
-
 /*Bild 1*/
-.project-img img:nth-child(1){
+.project-img img:nth-child(1) {
   bottom: 0px;
   left: 0px;
 }
 /*Bild 2*/
-.project-img img:nth-child(2){
+.project-img img:nth-child(2) {
   bottom: 10px;
   left: 10px;
 }
 /*Bild 3*/
-.project-img img:nth-child(3){
+.project-img img:nth-child(3) {
   bottom: 20px;
   left: 20px;
 }
 
- 
 /*Animation*/
-.project-img:hover img:nth-child(1){
-  transition: all .5s ease;
+.project-img:hover img:nth-child(1) {
+  transition: all 0.5s ease;
   bottom: -130px;
-  filter: grayscale(0%)brightness(100%);
-}
-.project-img:hover img:nth-child(2){
-  transition: all .5s ease;
   filter: grayscale(0%) brightness(100%);
 }
-.project-img:hover img:nth-child(3){
-  transition: all .5s ease;
+.project-img:hover img:nth-child(2) {
+  transition: all 0.5s ease;
+  filter: grayscale(0%) brightness(100%);
+}
+.project-img:hover img:nth-child(3) {
+  transition: all 0.5s ease;
   bottom: 140px;
   filter: grayscale(0%) brightness(100%);
 }
-
-
-
 
 /*Text area right*/
 .project-description {
@@ -787,11 +734,383 @@ header section::after {
 }
 
 /*DARKMODE*/
-.dark-mode{
+.dark-mode {
   color: red;
   background-color: white;
 }
 
 .h1-dark {
   color: green;
+}
+
+/*tablet*/
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  header section h2 {
+    margin: 15px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--white);
+    margin-bottom: 30px;
+  }
+  h5 {
+    font-size: 35px;
+    font-weight: lighter;
+    color: var(--html);
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    font-size: 18px;
+    color: var(--main);
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  p span,
+  ::before,
+  ::after {
+    font-family: "Source Serif 4", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0;
+    color: var(--html);
+    text-transform: none;
+    opacity: 0.5;
+  }
+
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  h1 span,
+  h2 span {
+    letter-spacing: 6px;
+    display: block;
+    padding: 0 0px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  /*General settings end*/
+
+  /*Header*/
+
+  header section {
+    height: 60%;
+  }
+
+  header section div::after {
+    bottom: 110px;
+  }
+
+  .title-wrapper {
+    margin-bottom: 30px;
+  }
+
+  header section p::before {
+    bottom: 75px;
+  }
+
+  header section p::after {
+    bottom: 35px;
+  }
+
+  header section::after {
+    bottom: -80px;
+  }
+
+  header,
+  .thats-me,
+  .projects-main-wrapper {
+    padding: 0;
+  }
+
+  /*Main*/
+
+  /*Thats me*/
+
+  .thats-me .h2 {
+    margin-bottom: 40px;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .thats-me::before {
+    top: 43px;
+  }
+
+  .thats-me .h2::before {
+    top: -6px;
+  }
+  .thats-me .h2::after {
+    bottom: -5px;
+  }
+
+  .thats-me-description::before {
+    top: -25px;
+  }
+
+  .thats-me-description::after {
+    bottom: -25px;
+  }
+
+  .thats-me-description {
+    margin-bottom: 64px;
+    padding-left: 0;
+  }
+
+  .thats-me::after {
+    bottom: 22px;
+  }
+
+  .thats-me a {
+    margin-left: 0;
+  }
+
+  .thats-me a::before {
+    top: -28px;
+    left: 0px;
+  }
+
+  .thats-me a::after {
+    bottom: -26px;
+    left: 0;
+  }
+
+  /*Work*/
+
+  .projects-main-wrapper::after {
+    bottom: 20px;
+  }
+  .projects-main-wrapper::before {
+    top: 20px;
+  }
+
+  .projects-main-wrapper h2::before {
+    top: 20px;
+  }
+
+  .projects-main-wrapper h2::after {
+    bottom: -30px;
+  }
+
+  .projects-main-wrapper h2 {
+    padding-top: 50px;
+    padding-left: 0;
+  }
+
+  .projects .element {
+    display: block;
+    text-align: center;
+  }
+
+  .project-text {
+    width: 100%;
+  }
+
+  .project-img {
+    margin: 0 auto 30px auto;
+    height: 160px;
+  }
+  .project-counter {
+    margin: auto;
+  }
+  .projects-article {
+    width: 100%;
+  }
+
+  .project-img:hover img:nth-child(1) {
+    bottom: -81px;
+  }
+  .project-img:hover img:nth-child(3) {
+    bottom: 100px;
+  }
+
+  .element {
+    transform: none !important;
+  }
+
+  .project-text h5 {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+/*handy*/
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  header section h2 {
+    margin: 10px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--white);
+    margin-bottom: 30px;
+  }
+  h5 {
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--html);
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    font-size: 16px;
+    color: var(--main);
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  p span,
+  ::before,
+  ::after {
+    font-family: "Source Serif 4", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: var(--html);
+    text-transform: none;
+    opacity: 0.5;
+  }
+
+  .wrapper {
+    padding: 0 30px;
+  }
+
+  h1 span,
+  h2 span {
+    letter-spacing: 6px;
+    display: block;
+    padding: 0 0px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .logo p {
+    font-size: 12px;
+  }
+
+  .circle-logo {
+    height: 30px;
+    width: 30px;
+    margin-right: 9px;
+  }
+
+  /*General settings end*/
+
+  /*Header*/
+  header section div::after{
+  bottom: 190px;
+  }
+
+  header section p::before {
+    bottom: 160px;
+}
+
+header section p::after {
+  bottom: 115px;
+}
+
+header section div::before {
+  top: 113px;
+}
+
+header section::after {
+  bottom: -130px;
+}
+  /*thats me*/
+
+ 
+
+  .thats-me {
+    display: block;
+  }
+
+  .first-article{
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+  .thats-me article {
+    width: 100%;
+  }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*handy SEHR KLEIN*/
+@media screen and (max-width: 425px) {
+h1 {
+  font-size: 20px;
+}
+header section div::before {
+  top: 150px;
+}
+header section div::after {
+  bottom: 220px;
+}
+header section p::before {
+  bottom: 193px;
+}
+header section p::after {
+  bottom: 145px;
+}
+header section::after {
+  bottom: -130px;
+}
 }
