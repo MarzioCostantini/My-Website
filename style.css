@@ -875,10 +875,10 @@ header::after {
   }
 
   .thats-me .h2::before {
-    top: -6px;
+    top: -15px;
   }
   .thats-me .h2::after {
-    bottom: -5px;
+    bottom: -15px;
   }
 
   .thats-me-description::before {
@@ -944,9 +944,17 @@ header::after {
   }
 
   .project-img {
-    margin: 0 auto 30px auto;
-    max-width: 50%;
+    margin: 0 auto 20px auto;
+    max-width: 130px;
+    height: 122px;
   }
+
+  .project-description {
+    margin-bottom: 20px;
+}
+.project-role {
+  margin-bottom: 20px;
+}
 
   .project-counter {
     display: none;
@@ -998,7 +1006,7 @@ header::after {
     font-size: 18px;
     font-weight: lighter;
     color: var(--white);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   h5 {
     font-size: 25px;
