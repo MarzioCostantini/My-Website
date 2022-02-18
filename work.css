@@ -76,6 +76,12 @@ p {
   z-index: -100;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 p span,
 ::before,
 ::after {
@@ -120,6 +126,10 @@ header a {
   padding: 6px;
   z-index: 10;
   margin-right: 15px;
+}
+
+.toggle-button-menu{
+  display: none;
 }
 /*Ab hier Logo*/
 
@@ -171,6 +181,7 @@ nav li img {
   font-weight: bold;
   color: var(--main);
 }
+
 
 
 /*Titel im Header*/
@@ -546,3 +557,304 @@ header::after {
   height: 120px;
   transform: rotate(150deg);
 }
+
+
+/*tablet*/
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  header section h2 {
+    margin: 15px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--white);
+    margin-bottom: 30px;
+  }
+  h5 {
+    font-size: 35px;
+    font-weight: lighter;
+    color: var(--html);
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    font-size: 18px;
+    color: var(--main);
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  p span,
+  ::before,
+  ::after {
+    font-family: "Source Serif 4", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0;
+    color: var(--html);
+    text-transform: none;
+    opacity: 0.5;
+  }
+
+ .wrapper{
+   padding: 0
+ }
+
+  h1 span,
+  h2 span {
+    letter-spacing: 6px;
+    display: block;
+    padding: 0 0px;
+  }
+
+  .g-line{
+    display: none;
+  }
+
+  /*Burger*/
+  .toggle-button-menu {
+    display: flex;
+    position: absolute;
+    top: 31px;
+    right: -9px;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+  }
+
+   .navbar-link{
+     display: none;
+     background-color: var(--background);
+     opacity: 0.995;
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 100px;
+     z-index: 10;
+     justify-content: center;
+    left: 0;
+    }
+   nav ul{
+     flex-direction: column;
+     justify-content: space-between;
+     z-index: 10;
+     height: 20%;
+   }
+
+   nav ul li {
+     margin-bottom: 50px;
+     font-size: 30px;
+   }
+
+   .nav-open {
+    display: flex;
+}
+  .navbar{
+  padding-top:20px ;
+}
+
+  /*General settings end*/
+
+  /*Header*/
+
+  header section {
+    height: 60%;
+  }
+
+  header section div::after {
+    bottom: 110px;
+  }
+
+  .title-wrapper {
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  header section p::before {
+    bottom: 75px;
+  }
+
+  header section p::after {
+    bottom: 35px;
+  }
+
+  header section::after {
+    bottom: -80px;
+  }
+
+  header,
+  .thats-me,
+  .projects-main-wrapper {
+   margin: 0 30px;
+  }
+
+  /*Main*/
+
+  /*Work*/
+
+  .projects-main-wrapper::after {
+    bottom: 20px;
+  }
+  .projects-main-wrapper::before {
+    top: 20px;
+  }
+
+  .projects-main-wrapper h2::before {
+    top: 45px;
+  }
+
+  .projects-main-wrapper h2::after {
+    bottom: -17px;
+  }
+
+  .project-img {
+    margin: 0 auto 30px auto;
+  }
+  .projects-main-wrapper h2 {
+    padding-top: 65px;
+    padding-left: 0;
+  }
+
+  .projects .element {
+    display: block;
+    text-align: center;
+  }
+
+  .project-text {
+    width: 100%;
+  }
+
+  .project-counter {
+    display: none;
+  }
+  .projects-article {
+    width: 100%;
+  }
+
+  .project-img:hover img:nth-child(1) {
+    bottom: -81px;
+  }
+  .project-img:hover img:nth-child(3) {
+    bottom: 100px;
+  }
+
+  .element {
+    transform: none !important;
+  }
+
+  .project-text h5 {
+    display: none;
+  }
+
+  .deko{
+    opacity: 0.3;
+  }
+
+}
+
+
+
+
+
+
+/*handy*/
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  header section h2 {
+    margin: 10px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  h5 {
+    font-size: 25px;
+    font-weight: lighter;
+    color: var(--html);
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    font-size: 16px;
+    color: var(--main);
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  p span,
+  ::before,
+  ::after {
+    font-family: "Source Serif 4", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: var(--html);
+    text-transform: none;
+    opacity: 0.5;
+  }
+
+
+
+  h1 span,
+  h2 span {
+    letter-spacing: 6px;
+    display: block;
+    padding: 0 0px;
+  }
+
+ 
+
+ 
+
+  .circle-logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 9px;
+  }
+
+  /*General settings end*/
+
+
+
+  /*Work*/
+  .project-img {
+    margin: 0 auto 20px auto;
+    max-width: 130px;
+    height: 122px;
+  }
+
+  .project-description {
+    margin-bottom: 20px;
+}
+.project-role {
+  margin-bottom: 20px;
+}
+}
+

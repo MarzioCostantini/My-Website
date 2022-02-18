@@ -163,6 +163,16 @@ nav li img {
   color: var(--main);
 }
 
+.toggle-button-menu {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*Titel im Header*/
 
 .wrapper {
@@ -366,7 +376,7 @@ main::after {
   position: relative;
 }
 
-.avatar-wrapper{
+.avatar-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -579,29 +589,27 @@ main::after {
 /*small desk*/
 @media screen and (max-width: 1111px) {
   .avatar-img {
-    width:270px;
+    width: 270px;
     margin-right: 20px;
-}
-.eye-wrapper{
-  top: 71px;
-  left: 31px;
-}
-.eye-wrapper div {
-  width: 36px;
-  height: 23px;
-  margin: 7px;  
-}
+  }
+  .eye-wrapper {
+    top: 71px;
+    left: 31px;
+  }
+  .eye-wrapper div {
+    width: 36px;
+    height: 23px;
+    margin: 7px;
+  }
 
-.eye-wrapper img {
-  width: 16px;
-}
+  .eye-wrapper img {
+    width: 16px;
+  }
 
-header h2 {
-  font-size: 40px;
+  header h2 {
+    font-size: 40px;
+  }
 }
-
-}
-
 
 /*tablet*/
 @media screen and (max-width: 768px) {
@@ -655,7 +663,7 @@ header h2 {
   }
 
   .wrapper {
-    padding: 0 15px;
+    padding: 0 30px;
   }
 
   h1 span,
@@ -665,11 +673,57 @@ header h2 {
     padding: 0 0px;
   }
 
-  nav ul {
+  .g-line {
     display: none;
   }
+
+  /*Burger*/
+  .toggle-button-menu {
+    display: flex;
+    position: absolute;
+    top: 33px;
+    right: 0px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+
+  .navbar-link {
+    display: none;
+    background-color: var(--background);
+    opacity: 0.995;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 100px;
+    z-index: 10;
+    justify-content: center;
+    left: 0;
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    height: 20%;
+  }
+
+  nav ul li {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+
+  .nav-open {
+    display: flex;
+  }
+  .navbar {
+    padding-top: 20px;
+  }
+
   /*General settings end*/
 
+  .header-wrapper{
+    display: block;
+  }
   /*AVATAR*/
 
   .avatar {
@@ -772,10 +826,6 @@ header h2 {
     padding: 0 0px;
   }
 
-  nav ul {
-    display: none;
-  }
-
   .logo p {
     font-size: 12px;
   }
@@ -799,7 +849,7 @@ header h2 {
   }
 
   .header-wrapper article:not(.eye-wrapper) {
-  margin: auto;
+    margin: auto;
   }
 
   header section h2 {
@@ -809,13 +859,13 @@ header h2 {
     margin: 0px;
   }
 
-.btn-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}   
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-/*AVATAR*/
+  /*AVATAR*/
 
   /*MY Skills*/
 
@@ -823,16 +873,16 @@ header h2 {
     display: block;
   }
 
-  .my-skills article{
+  .my-skills article {
     width: 100%;
   }
 
-  .my-skills .title-wrapper h2{
+  .my-skills .title-wrapper h2 {
     padding: 20px 0 0 0;
-    margin: 90px 0 45px 0 ;
+    margin: 90px 0 45px 0;
   }
 
-  .my-skills-text{
+  .my-skills-text {
     padding-left: 0;
     margin-bottom: 45px;
   }
@@ -841,7 +891,7 @@ header h2 {
     margin-right: 30px;
   }
 
-  section h2{
+  section h2 {
     margin: 0 0 30px 0;
   }
 
@@ -855,23 +905,23 @@ header h2 {
 
   /*Bar*/
 
-  .bar-wrapper-full{
+  .bar-wrapper-full {
     height: 10px;
   }
 
-  .bar-height{
+  .bar-height {
     height: 10px;
   }
 
-  .bar-wrapper h6{
+  .bar-wrapper h6 {
     margin-bottom: 2px;
   }
 
-  main::after{
+  main::after {
     bottom: 15px;
   }
 
-  .htmlbase{
+  .htmlbase {
     display: none;
   }
   main {

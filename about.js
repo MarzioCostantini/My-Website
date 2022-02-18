@@ -1,3 +1,13 @@
+
+const toggleButton = document.querySelector(".toggle-button-menu")
+const navbarLinks = document.querySelector(".navbar-link")
+
+toggleButton.addEventListener("click", function(event){
+  event.preventDefault()
+  navbarLinks.classList.toggle ("nav-open")
+})
+
+
 const animierteElemente = document.querySelectorAll(".scrollanimation")
 const observer = new IntersectionObserver(
     (element) => {

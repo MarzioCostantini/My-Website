@@ -100,6 +100,11 @@ nav {
   padding: 40px 0;
 }
 
+.burgermenu {
+  width: 30px;
+  display: none;
+}
+
 .circle-logo {
   background-color: white;
   height: 50px;
@@ -138,9 +143,22 @@ nav ul {
   position: relative;
 }
 
+
+.toggle-button-menu{
+  display: none;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header a {
   text-decoration: none;
 }
+
+
 
 nav ul a {
   color: var(--white);
@@ -291,17 +309,14 @@ h2 span:hover {
 
   40% {
     transform: scale(0.8, 1.9);
-    color: var(--main);
   }
 
   60% {
     transform: scale(1.2, 0.8);
-    color: var(--main);
   }
 
   80% {
     transform: scale(0.9, 1.2);
-    color: var(--main);
   }
 }
 
@@ -815,10 +830,51 @@ header::after {
     padding: 0 0px;
   }
 
-  nav ul {
+  .g-line{
     display: none;
   }
 
+  /*Burger*/
+  .toggle-button-menu {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+  }
+
+   .navbar-link{
+     display: none;
+     background-color: var(--background);
+     opacity: 0.995;
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 100px;
+     z-index: 10;
+     justify-content: center;
+    left: 0;
+    }
+   nav ul{
+     flex-direction: column;
+     justify-content: space-between;
+     z-index: 10;
+     height: 20%;
+   }
+
+   nav ul li {
+     margin-bottom: 50px;
+     font-size: 30px;
+   }
+
+   .nav-open {
+    display: flex;
+}
+  .navbar{
+  padding-top:20px ;
+}
 
   /*General settings end*/
 
@@ -917,7 +973,7 @@ header::after {
   }
 
   .projects-main-wrapper h2::before {
-    top: 35px;
+    top: 45px;
   }
 
   .projects-main-wrapper h2::after {
@@ -928,7 +984,7 @@ header::after {
     margin: 0 auto 30px auto;
   }
   .projects-main-wrapper h2 {
-    padding-top: 50px;
+    padding-top: 65px;
     padding-left: 0;
   }
 
@@ -1028,9 +1084,7 @@ header::after {
     padding: 0 0px;
   }
 
-  nav ul {
-    display: none;
-  }
+ 
 
  
 

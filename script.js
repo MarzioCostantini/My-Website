@@ -1,3 +1,14 @@
+/*Burgermenu*/
+
+const toggleButton = document.querySelector(".toggle-button-menu")
+const navbarLinks = document.querySelector(".navbar-link")
+
+toggleButton.addEventListener("click", function(event){
+  event.preventDefault()
+  navbarLinks.classList.toggle ("nav-open")
+})
+
+
 document.onmousemove = cursorAnim;
 var colors = ["#CBA422"];
 function cursorAnim(event) {
